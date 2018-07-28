@@ -18,6 +18,9 @@ let theme = {
     lg: 992,
     xl: 1200
   },
+  animation: {
+    duration: 400
+  },
   headerHeight: "4rem"
 };
 

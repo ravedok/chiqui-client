@@ -14,5 +14,6 @@ injectGlobal`
     font-family: ${theme.font.primary};
     font-weight: 400;
     font-size: ${theme.font.size}px;
+    overflow-y: scroll;
   }    
 `;

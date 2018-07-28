@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { lighten } from "polished";
+import { Link } from "react-router-dom";
 import { Container } from "../../shared";
+import Menu from "./HeaderMenu";
 
 const Wrapper = styled.header`
   position: fixed;
@@ -11,6 +12,7 @@ const Wrapper = styled.header`
   height: 2rem;
   background-color: ${({ theme }) => theme.color.dark};
   padding: 1rem 0;
+  z-index: 1;
 
   ${Container} {
     display: flex;
@@ -24,25 +26,10 @@ const Logo = styled.div`
   font-weight: bold;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
-`;
+  text-decoration: none;
 
-const Menu = styled.nav`
-  display: flex;
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-      a {
-        padding: 0.5rem 1rem;
-        color: ${({ theme }) => theme.color.white};
-        text-decoration: none;
-        &:hover {
-          color: ${({ theme }) => lighten(0.2, theme.color.primary)};
-        }
-      }
-    }
+  a {
+    text-decoration: none;
   }
 `;
 
@@ -50,23 +37,10 @@ const Header = () => {
   return (
     <Wrapper>
       <Container>
-        <Logo>Logo</Logo>
-        <Menu>
-          <ul>
-            <li>
-              <a href="/opcion-1">Opción 1</a>
-            </li>
-            <li>
-              <a href="/opcion-2">Opción 2</a>
-            </li>
-            <li>
-              <a href="/opcion-3">Opción 3</a>
-            </li>
-            <li>
-              <a href="/opcion-3">Opción 3</a>
-            </li>
-          </ul>
-        </Menu>
+        <Logo>
+          <Link to="/">Logo</Link>
+        </Logo>
+        <Menu />
       </Container>
     </Wrapper>
   );
