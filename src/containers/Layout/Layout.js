@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
-import { theme } from "../../config";
+
+// import { GlobalStyles } from "../../config";
 
 import { Header, Footer, Main } from "./index";
 
@@ -13,13 +13,11 @@ const Wrapper = styled.div`
 
 const Layout = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Wrapper>
-        <Header />
-        <Main />
-        <Footer />
-      </Wrapper>
-    </ThemeProvider>
+    <Wrapper>
+      <Header />
+      <Main />
+      <Footer />
+    </Wrapper>
   );
 };
 
