@@ -27,6 +27,10 @@ let theme = {
     lg: 992,
     xl: 1200
   },
+  zIndex: {
+    header: 1,
+    mobileMenu: 2
+  },
   animation: {
     duration: 400
   },

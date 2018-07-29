@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { lighten } from "polished";
+import { media } from "../../utils";
 
 const Wrapper = styled.nav`
   display: flex;
+
+  ${media.down.sm`
+    display: none;
+  `};
+
   ul {
     display: flex;
     list-style: none;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Container } from "../../shared";
 import Menu from "./HeaderMenu";
+import MenuButton from "./MenuButton";
 
 const Wrapper = styled.header`
   position: fixed;
@@ -12,7 +13,7 @@ const Wrapper = styled.header`
   height: 2rem;
   background-color: ${({ theme }) => theme.color.dark};
   padding: 1rem 0;
-  z-index: 1;
+  z-index: ${({ theme }) => theme.zIndex.header};
 
   ${Container} {
     display: flex;
@@ -33,10 +34,11 @@ const Logo = styled.div`
   }
 `;
 
-const Header = () => {
+const Header = ({ onOpenMobileMenu }) => {
   return (
     <Wrapper>
       <Container>
+        <MenuButton onOpenMobileMenu={onOpenMobileMenu} />
         <Logo>
           <Link to="/">Logo</Link>
         </Logo>

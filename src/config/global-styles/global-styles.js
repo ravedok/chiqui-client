@@ -20,6 +20,14 @@ const GlobalStyles = ({ theme, children }) => {
       font-size: ${theme.font.size}px;
       overflow-y: scroll;
     }    
+
+    a {
+      color: ${({ theme }) => theme.color.primary};
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   `;
 
   return children;
