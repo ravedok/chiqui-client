@@ -1,37 +1,27 @@
 import React from "react";
 
-import { Container } from "../../shared";
-import { BreakpointDown, BreakpointOnly, BreakpointUp } from "./Breakpoints";
+import { Container, Icon } from "../../shared";
+import Breakpoints from "./Breakpoints";
+import Icons from "./Icons";
 
 const StyleGuide = () => {
   return (
     <Container>
       <h1>Guía de estilos</h1>
-      <BreakpointUp>
-        <strong>Up</strong>
-        <span className="xs">XS</span>
-        <span className="sm">SM</span>
-        <span className="md">MD</span>
-        <span className="lg">LG</span>
-        <span className="xl">XL</span>
-      </BreakpointUp>
-      <BreakpointDown>
-        <strong>Down</strong>
-        <span className="xs">XS</span>
-        <span className="sm">SM</span>
-        <span className="md">MD</span>
-        <span className="lg">LG</span>
-        <span className="xl">XL</span>
-      </BreakpointDown>
+      <h2>Breakpoints</h2>
 
-      <BreakpointOnly>
-        <strong>Only</strong>
-        <span className="xs">XS</span>
-        <span className="sm">SM</span>
-        <span className="md">MD</span>
-        <span className="lg">LG</span>
-        <span className="xl">XL</span>
-      </BreakpointOnly>
+      <Breakpoints />
+
+      <h2>Iconos</h2>
+
+      <Icons />
+
+      <h3>
+        Esto es un icono <Icon name="zoom" />
+      </h3>
+      <p>
+        Esto es un icono <Icon name="zoom" />
+      </p>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel libero

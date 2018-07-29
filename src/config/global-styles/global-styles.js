@@ -1,10 +1,14 @@
 import { injectGlobal, withTheme } from "styled-components";
 import styledNormalize from "styled-normalize";
+// import icons from "./icons";
+
+import icons from "./icons";
 
 const GlobalStyles = ({ theme, children }) => {
   injectGlobal`
   
-    ${styledNormalize}
+  ${styledNormalize}
+  ${icons}
   
     @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
   

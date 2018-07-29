@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import { media } from "../../utils";
 import { theme } from "../../config";
@@ -5,7 +6,7 @@ import { lighten } from "polished";
 
 const hightlight = `background-color: ${lighten(0.2, theme.color.primary)};`;
 
-const Breackpoints = styled.div`
+const Breackpoint = styled.div`
   display: flex;
   align-items: center;
 
@@ -33,22 +34,54 @@ const hightlightBreakpoint = func => {
   }, "");
 };
 
-const BreakpointUp = Breackpoints.extend`
+const BreakpointUp = Breackpoint.extend`
   span {
     ${hightlightBreakpoint(media.up)};
   }
 `;
 
-const BreakpointDown = Breackpoints.extend`
+const BreakpointDown = Breackpoint.extend`
   span {
     ${hightlightBreakpoint(media.down)};
   }
 `;
 
-const BreakpointOnly = Breackpoints.extend`
+const BreakpointOnly = Breackpoint.extend`
   span {
     ${hightlightBreakpoint(media.only)};
   }
 `;
 
-export { BreakpointDown, BreakpointOnly, BreakpointUp };
+const Breakpoints = () => {
+  return (
+    <div>
+      <BreakpointUp>
+        <strong>Up</strong>
+        <span className="xs">XS</span>
+        <span className="sm">SM</span>
+        <span className="md">MD</span>
+        <span className="lg">LG</span>
+        <span className="xl">XL</span>
+      </BreakpointUp>
+      <BreakpointDown>
+        <strong>Down</strong>
+        <span className="xs">XS</span>
+        <span className="sm">SM</span>
+        <span className="md">MD</span>
+        <span className="lg">LG</span>
+        <span className="xl">XL</span>
+      </BreakpointDown>
+
+      <BreakpointOnly>
+        <strong>Only</strong>
+        <span className="xs">XS</span>
+        <span className="sm">SM</span>
+        <span className="md">MD</span>
+        <span className="lg">LG</span>
+        <span className="xl">XL</span>
+      </BreakpointOnly>
+    </div>
+  );
+};
+
+export default Breakpoints;
