@@ -21,14 +21,12 @@ class Layout extends Component {
   }
 
   openMobileMenu = () => {
-    console.log("abrir");
     this.setState({
       isMobileMenuShow: true
     });
   };
 
   closeMobileMenu = () => {
-    console.log("cerrar");
     this.setState({
       isMobileMenuShow: false
     });
