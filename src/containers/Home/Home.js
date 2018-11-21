@@ -37,7 +37,6 @@ class Example extends Component {
   }
 
   toggle = () => {
-    console.log(this.state.visible);
     this.setState({
       visible: this.state.visible === 1 ? 0 : 1
     });

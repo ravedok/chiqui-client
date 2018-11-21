@@ -1,0 +1,3 @@
+export const CHARACTER_FETCH_START = "character/FETCH_START";
+export const CHARACTER_FETCH_COMPLETED = "character/FETCH_COMPLETED";
+export const CHARACTER_FETCH_REJECTED = "character/FETCH_REJECTED";

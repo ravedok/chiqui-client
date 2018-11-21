@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import registerServiceWorker from "./registerServiceWorker";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles, theme } from "./config";
@@ -10,7 +10,7 @@ import { ScrollToTop } from "./shared";
 
 import { Layout } from "./containers/Layout";
 
-ReactDOM.render(
+render(
   <ThemeProvider theme={theme}>
     <GlobalStyles>
       <Router>
